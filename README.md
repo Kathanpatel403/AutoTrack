@@ -160,10 +160,3 @@ The Django server for the website will also run locally, usually at `http://127.
 - For Expo app testing, you can use the Expo Go app on your Android/iOS device.
 
 ---
-
-## 💬 Support
-For any issues, please raise a query or contact the project maintainers.
-
----
-
-# 🔥 Happy Hacking!
