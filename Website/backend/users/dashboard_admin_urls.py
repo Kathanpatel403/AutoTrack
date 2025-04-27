@@ -1,0 +1,73 @@
+from django.urls import path
+from .dashboard_admin_views import  AddPoliceOfficerView, EchallanDetailView, EchallanLimitedView, EchallanQueryListView, TotalPaymentAmountView, PaidEchallanCountView, MostCommonViolationTypeView, MostCommonViolationPlaceView, MostCommonViolationVehicleClassView,EchallanQueryListCreateView,EchallanQueryDetailView,TotalEchallanCountView,TotalIssuedSolvedEchallanCountView,EchallanCreateView,EchallanRetrieveUpdateView, UserWithPoliceListView, UpdatePoliceStatusView, UpdateUserRoleView
+from .dashboard_admin_views import *
+from .dashboard_admin_views import  AddPoliceOfficerView, EchallanDetailView, EchallanLimitedView, EchallanQueryListView, TotalPaymentAmountView, PaidEchallanCountView, MostCommonViolationTypeView, MostCommonViolationPlaceView, MostCommonViolationVehicleClassView,EchallanQueryListCreateView,EchallanQueryDetailView,TotalEchallanCountView,TotalIssuedSolvedEchallanCountView,EchallanCreateView,EchallanRetrieveUpdateView, UserWithPoliceListView, UpdatePoliceStatusView, UpdateUserRoleView, UpdateEchallanStatusView,UpdateEchallanVerificationStatus
+from .dashboard_admin_views import AddPoliceOfficerView, DashboardStatsAPIView, EchallanDetailView, EchallanLimitedView, EchallanQueryListView, EchallanVerificationAPIView, GeneratePaymentDataView, PopulatePoliceOfficersView, RecentChallansAPIView, RevenueChartAPIView, TotalPaymentAmountView, PaidEchallanCountView, MostCommonViolationTypeView, MostCommonViolationPlaceView, MostCommonViolationVehicleClassView, EchallanQueryListCreateView, EchallanQueryDetailView, TotalEchallanCountView, TotalIssuedSolvedEchallanCountView, EchallanCreateView, EchallanRetrieveUpdateView, UserWithPoliceListView, UpdatePoliceStatusView, UpdateUserRoleView
+
+urlpatterns = [
+    path('total-payment/', TotalPaymentAmountView.as_view(), name='total-payment'),
+    path('total-paid-echallan-count/',
+         PaidEchallanCountView.as_view(), name='paid-echallan-count'),
+    path('violation/type', MostCommonViolationTypeView.as_view(),
+         name='most-common-violation-type'),
+    path('violation/vehicle-class/', MostCommonViolationVehicleClassView.as_view(),
+         name='most-common-violation-vehicle-class'),
+    path('violation/place/', MostCommonViolationPlaceView.as_view(),
+         name='most-common-violation-place'),
+    path('echallan-query/', EchallanQueryListCreateView.as_view(),
+         name='echallan-query-list'),
+    path('echallan-query/<str:ticket_no>/',
+         EchallanQueryDetailView.as_view(), name='echallan-query-detail'),
+    path('total-echallan-count/', TotalEchallanCountView.as_view(),
+         name='total-echallan-count'),
+    path('total-issue-solved-count/',
+         TotalIssuedSolvedEchallanCountView.as_view(), name='total-echallan-count'),
+    path('echallan/create/', EchallanCreateView.as_view(), name='echallan-create'),
+    path('echallan/<int:pk>/', EchallanRetrieveUpdateView.as_view(), name='echallan-retrieve-update'),
+   path('users-with-police/', UserWithPoliceListView.as_view(), name='users-with-police'),
+    path('update-police-status/<int:id>/', UpdatePoliceStatusView.as_view(), name='update-police-status'),
+    path('update-user-role/<int:pk>/', UpdateUserRoleView.as_view(), name='update-user-role'),
+    path("add-police-officer/", AddPoliceOfficerView.as_view(), name="add-police-officer"),
+    path('echallan-limited/', EchallanLimitedView.as_view(), name='echallan-limited'),
+    path("echallan-limited/<int:id>/", EchallanDetailView.as_view(), name="echallan-detail"),
+    path('echallan-queries/', EchallanQueryListView.as_view(), name='echallan-query-list'),
+    
+    path('echallan-queries/<int:pk>/', UpdateEchallanStatusView.as_view(), name='update-echallan-status'),
+    path("update-challan/<int:pk>/", UpdateEchallanVerificationStatus.as_view(), name="update-challan"),
+ 
+    path('echallan/<int:pk>/', EchallanRetrieveUpdateView.as_view(),
+         name='echallan-retrieve-update'),
+    path('users-with-police/', UserWithPoliceListView.as_view(),
+         name='users-with-police'),
+    path('populate-police-officers/', PopulatePoliceOfficersView.as_view(),
+         name='populate-police-officers'),
+    path('update-police-status/<int:pk>/',
+         UpdatePoliceStatusView.as_view(), name='update-police-status'),
+    path('update-user-role/<int:pk>/',
+         UpdateUserRoleView.as_view(), name='update-user-role'),
+    path("add-police-officer/", AddPoliceOfficerView.as_view(),
+         name="add-police-officer"),
+    path('echallan-limited/', EchallanLimitedView.as_view(),
+         name='echallan-limited'),
+    path("echallan-limited/<int:id>/",
+         EchallanDetailView.as_view(), name="echallan-detail"),
+    path('echallan-queries/', EchallanQueryListView.as_view(),
+         name='echallan-query-list'),
+    path('echallan-verify/',
+         EchallanVerificationAPIView.as_view(), name='echallan-verify'),
+    path('generate-payment-data/', GeneratePaymentDataView.as_view(),
+         name='generate-payment-data'),
+    path('api/dashboard/stats/', DashboardStatsAPIView.as_view(),
+         name='dashboard_stats'),
+    path('api/dashboard/revenue-chart/',
+         RevenueChartAPIView.as_view(), name='revenue_chart'),
+    path('api/dashboard/recent-challans/',
+         RecentChallansAPIView.as_view(), name='recent_challans'),
+    path('api/dashboard/violation-counts/',
+         ViolationTypeCountView.as_view(), name='recent_challans'),
+     path('api/dashboard/weekly-violations/', WeeklyViolationsView.as_view(),
+         name='weekly-violations'),
+
+]   
+
+     

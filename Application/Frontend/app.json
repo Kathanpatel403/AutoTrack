@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "AutoTrack",
+    "slug": "AutoTrack",
+    "version": "2.0.0",
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone",
+          "recordAudioAndroid": true
+        }
+      ]
+    ],
+    "orientation": "portrait",
+    "icon": "./assets/app.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+      
+    },
+    "android": {
+      
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/app.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/app.png"
+    }
+  }
+}

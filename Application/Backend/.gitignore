@@ -1,0 +1,71 @@
+venv/
+.env
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+env/
+venv/
+ENV/
+*.egg-info/
+*.egg/
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.pyo
+*.sqlite3
+db.sqlite3
+instance/
+media/
+
+# Local environment variables
+.env
+*.env
+
+# Static files
+/staticfiles/
+/static/
+/public/
+
+# Temporary files and folders
+*.~*
+*.swp
+*.swo
+*.bak
+*.tmp
+*.backup
+*.orig
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# Test outputs
+*.pytest_cache/
+.nox/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Deployment
+*.dump
+*.pid
+
+# Pycharm specific
+*.iml
+*.ipr
+*.iws
