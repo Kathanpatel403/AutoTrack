@@ -71,8 +71,8 @@ Auto-Track/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/auto-track.git
-cd auto-track
+git clone https://github.com/Kathanpatel403/AutoTrack.git
+cd autotrack
 ```
 
 ---
